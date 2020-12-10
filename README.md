@@ -8,3 +8,4 @@ a couple guides I'm looking at:
 > - https://www.baeldung.com/websockets-spring
 > - http://zetcode.com/spring/websocket/
 > - https://developer.okta.com/blog/2019/10/09/java-spring-websocket-tutorial
+> - https://spring.io/blog/2015/10/13/react-js-and-spring-data-rest-part-4-events
