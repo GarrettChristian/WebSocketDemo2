@@ -1,111 +1,66 @@
 import './App.css';
-import React, {Component} from 'react';
-import SockJsClient from 'react-stomp';
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Chat from "./Components/Chat";
+import UserName from './Components/UserName';
 
 class App extends Component {
 
   constructor(props) {
-      super(props);
-      this.state = {
-          messages: [],
-          typedMessage: "Message To Send",
-          name: "Garrett"
-      }
+    super(props);
+    this.state = {
+        name: "Default Username"
+    }
   }
 
-  setName = (name) => {
-      console.log(name);
-      this.setState({name: name});
-  };
-
-  sendMessage = () => {
-    this.clientRef.sendMessage('/app/chat', JSON.stringify({
-        from: this.state.name,
-        text: this.state.typedMessage
-    }));
-    this.setState({typedMessage: "Message To Send"});
-  };
-
-  displayMessages = () => {
-    return (
-      <div>
-          {this.state.messages.sort((a, b) => b.date - a.date).map(msg => {
-            return (
-                <div>
-                    {this.state.name === msg.from ?
-                      <div>
-                        <p style={{ color: 'green' }}>{msg.from} : {msg.text} : {msg.time}</p>
-                      </div> :
-                      <div>
-                        <p style={{ color: 'red' }}>{msg.from} : {msg.text} : {msg.time}</p>
-                      </div>
-                    }
-              </div>)
-          })}
-      </div>
-    );
-  };  
+  setName = (selectedName) => {
+    this.setState({
+      name: selectedName
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>
-            {this.state.name} Testing Web Sockets!
-          </h1>
-      
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              <p>User : </p>
-              <textarea value={this.state.name} onChange={(event) => {
-                this.setState({name: event.target.value});
-              }}/>
-            </label>
-          </form>
+          <Router>
 
-          <div className="align-center">
-            <br/><br/>
-
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                <p>Message : </p>
-                <textarea value={this.state.typedMessage} onChange={(event) => {
-                  this.setState({typedMessage: event.target.value});
-                }}/>
-              </label>
-            </form>
-
-            <button onClick={this.sendMessage}>Send</button>
-
-          </div>
-          <br/><br/>
-          <div className="align-center">
-              Messages:{this.displayMessages()}
-          </div>
-
-          <div>
-            <SockJsClient url='http://localhost:8080/chat/'
-              topics={['/topic/messages']}
-              onConnect={() => {
-                  console.log("connected!");
-              }}
-              onDisconnect={() => {
-                  console.log("Disconnected");
-              }}
-              onMessage={(msg) => {
-                  var jobs = this.state.messages;
-                  jobs.push(msg);
-                  this.setState({messages: jobs});
-                  console.log(msg);
-              }}
-              ref={(client) => {
-                  this.clientRef = client
-              }}/>
-          </div>
+            <div className="App-title" >
+              <br></br>
+                
+                <h1>
+                  Testing Web Sockets!
+                </h1>
+                <h6>A Simple Chat App By Garrett Christian</h6>
+                <Link to="/" style={{ color: '#FFF' }}>
+                  return to username select
+                </Link>
+              <br></br>
+            </div>
+            <br></br>
+          
+            <div>
+              {/* A <Switch> looks through its children <Route>s and
+                  renders the first one that matches the current URL. */}
+              <Switch>
+                <Route path="/chat">
+                  <Chat name={this.state.name}/>
+                </Route>
+                <Route path="/">
+                  <UserName setName = {this.setName} />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
         </header>
       </div>
     )
   }
 }
 
-export default App;
+export default App
