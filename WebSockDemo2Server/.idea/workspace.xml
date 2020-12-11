@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd3d028b-a80e-490e-9245-ccc0831a07b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../websock_demo2_client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../websock_demo2_client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../websock_demo2_client/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/../websock_demo2_client/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../websock_demo2_client/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../websock_demo2_client/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../websock_demo2_client/src/Components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/../websock_demo2_client/src/Components/Chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -89,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+            <state relative-caret-position="309">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,12 +112,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketDemo2Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/OutputMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/ChatController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java" />
       </list>
     </option>
   </component>
@@ -334,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/WebSocketDemo2/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        <state relative-caret-position="309">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
