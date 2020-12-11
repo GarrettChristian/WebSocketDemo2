@@ -76,8 +76,8 @@ class Chat extends Component {
         </div>
 
         <div>
-          {/* <SockJsClient url='http://localhost:8080/chat/' */}
-          <SockJsClient url='https://web-socket-demo-back.herokuapp.com//chat/'
+          <SockJsClient url='http://localhost:8080/chat/'
+          {/* <SockJsClient url='https://web-socket-demo-back.herokuapp.com//chat/' */}
             topics={['/topic/messages']}
             onConnect={() => {
                 console.log("connected!");
