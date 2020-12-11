@@ -7,10 +7,25 @@ class DisplayMessages extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          messages: this.props.messages,
+          messages: [],
           name: this.props.name,
           recievedMessage: false
       }
+  }
+
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+  
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  addMessage = (msg) => {
+    var jobs = this.state.messages;
+    jobs.push(msg);
+    this.setState({messages: jobs});
+    this.state.recievedMessage = true;
   }
 
   displayMessages = () => {
@@ -42,6 +57,9 @@ class DisplayMessages extends Component {
         <div className="DivWithScroll" style={{display: this.state.recievedMessage ? 'block' : 'none' }}>
           <div className="DivToScroll">
             {this.displayMessages()}
+          </div>
+          <div style={{ float:"left", clear: "both" }}
+             ref={(el) => { this.messagesEnd = el; }}>
           </div>
         </div>
         <div className="DivToScroll" style={{display: !this.state.recievedMessage ? 'block' : 'none' }}>

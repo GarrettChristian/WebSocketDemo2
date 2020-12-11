@@ -1,6 +1,7 @@
 // import './App.css';
 import React, {Component} from 'react';
 import SockJsClient from 'react-stomp';
+import DisplayMessages from './DisplayMessages';
 
 class Chat extends Component {
 
@@ -12,6 +13,7 @@ class Chat extends Component {
           name: this.props.name,
           recievedMessage: false
       }
+      this.generalDisplayArea = React.createRef();
   }
 
   sendMessage = () => {
@@ -69,15 +71,7 @@ class Chat extends Component {
 
             <div class="col-md-6">
               {/* Display messages */}
-              <p>Messages:</p>
-              <div className="DivWithScroll" style={{display: this.state.recievedMessage ? 'block' : 'none' }}>
-                <div className="DivToScroll">
-                  {this.displayMessages()}
-                </div>
-              </div>
-              <div className="DivToScroll" style={{display: !this.state.recievedMessage ? 'block' : 'none' }}>
-                nothing recieved yet
-              </div>
+              <DisplayMessages ref={this.generalDisplayArea} name = {this.state.name}/>
             </div>
           </div>
         </div>
@@ -92,11 +86,8 @@ class Chat extends Component {
                 console.log("Disconnected");
             }}
             onMessage={(msg) => {
-                var jobs = this.state.messages;
-                jobs.push(msg);
-                this.setState({messages: jobs});
                 console.log(msg);
-                this.state.recievedMessage = true;
+                this.generalDisplayArea.current.addMessage(msg);
             }}
             ref={(client) => {
                 this.clientRef = client
