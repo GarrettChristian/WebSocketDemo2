@@ -1,9 +1,6 @@
 import './App.css';
 import React, {Component} from 'react';
 import SockJsClient from 'react-stomp';
-// import Button from 'react-bootstrap/Button';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import TextField from '@material-ui/core/TextField';
 
 class App extends Component {
 
@@ -32,7 +29,7 @@ class App extends Component {
   displayMessages = () => {
     return (
       <div>
-          {this.state.messages.map(msg => {
+          {this.state.messages.sort((a, b) => b.date - a.date).map(msg => {
             return (
                 <div>
                     {this.state.name === msg.from ?
