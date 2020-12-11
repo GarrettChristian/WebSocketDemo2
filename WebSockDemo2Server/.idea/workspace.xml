@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd3d028b-a80e-490e-9245-ccc0831a07b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dd3d028b-a80e-490e-9245-ccc0831a07b6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
-              <caret line="16" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="21" />
+              <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -335,7 +333,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="16" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="21" />
+          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
