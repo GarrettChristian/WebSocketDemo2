@@ -1,4 +1,3 @@
-// import './App.css';
 import React, {Component} from 'react';
 import SockJsClient from 'react-stomp';
 import DisplayMessages from './DisplayMessages';

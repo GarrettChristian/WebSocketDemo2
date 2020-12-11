@@ -1,6 +1,4 @@
-// import './App.css';
 import React, {Component} from 'react';
-import SockJsClient from 'react-stomp';
 
 class DisplayMessages extends Component {
 
