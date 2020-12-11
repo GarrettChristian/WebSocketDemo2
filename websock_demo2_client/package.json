@@ -21,6 +21,10 @@
     "eject": "react-scripts eject",
     "postinstall": "npm run build"
   },
+  "engines": {
+    "node": ">= 6.9.4",
+    "npm": ">= 4.4.0"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
