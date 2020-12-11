@@ -21,7 +21,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.addEndpoint("/chat");
         registry.addEndpoint("/chat")
                 .setAllowedOrigins("http://localhost:3000")
-                .setAllowedOrigins("https://web-socket-demo-front.herokuapp.com/")
+                .setAllowedOrigins("https://web-socket-demo-front.herokuapp.com")
                 .withSockJS();
     }
 
